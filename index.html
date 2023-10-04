@@ -34,7 +34,7 @@
     //Compute the position of each group on the pie:
     var pie = d3.pie()
     .value(function(d) { return d.Empenhado; })
-    var uniqueAnos = d3.map(data, function(d){return d.Ano;}).keys();
+    var uniqueAnos = d3.map(data, function(d){return d.Ano ? d.Ano: "Total";}).keys();
     console.log("typeof d.ano ", typeof d.Ano)
     console.log("unique ", uniqueAnos);
 
